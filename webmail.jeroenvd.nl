@@ -59,3 +59,20 @@
         
         ProxyPass /  https://192.168.88.162/
         ProxyPassReverse / https://192.168.88.162/
+
+ #<Location />
+ #       ProxyPass https://192.168.88.126/SOGo/
+ #       ProxyPassReverse https://192.168.88.126/SOGo/
+ #   </Location>
+
+ #<Location /SOGo>
+ #       ProxyPass https://192.168.88.126/
+ #       ProxyPassReverse https://192.168.88.126/
+ #   </Location>
+        
+#<Location /Microsoft-Server-ActiveSync>
+#        ProxyPass https://192.168.88.162/Microsoft-Server-ActiveSync
+#        ProxyPassReverse https://192.168.88.162/Microsoft-Server-ActiveSync
+#</Location>
+
+</VirtualHost>
