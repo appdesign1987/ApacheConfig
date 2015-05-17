@@ -14,6 +14,10 @@
         # SSL Configuratie
 
         SSLEngine on
+         SSLProxyVerify none 
+SSLProxyCheckPeerCN off
+SSLProxyCheckPeerName off
+SSLProxyCheckPeerExpire off
         ErrorLog /var/log/apache2/ssl_error_log
         TransferLog /var/log/apache2/ssl_access_log
         CustomLog /var/log/apache2/ssl_request_log "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
