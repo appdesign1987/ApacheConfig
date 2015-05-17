@@ -14,9 +14,9 @@
         # SSL Configuratie
 
         SSLEngine on
-        ErrorLog /var/log/apache2/webmail.jeroenvd.nl/ssl_error_log
-        TransferLog /var/log/apache2/webmail.jeroenvd.nl/ssl_access_log
-        CustomLog /var/log/apache2/webmail.jeroenvd.nl/ssl_request_log "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
+        ErrorLog /var/log/apache2/ssl_error_log
+        TransferLog /var/log/apache2l/ssl_access_log
+        CustomLog /var/log/apache2/ssl_request_log "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
         LogLevel warn
 
         SSLCertificateFile      /ssl/STAR_jeroenvd_nl.crt
