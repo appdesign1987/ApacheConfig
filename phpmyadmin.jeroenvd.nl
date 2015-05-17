@@ -19,7 +19,7 @@
         CustomLog /var/log/apache2/ssl_request_log "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
         LogLevel warn
 
-        SSLCertificateFile      /ssl/STAR_jeroenvd_nl.crt
+        SSLCertificateFile      /ssl/jeroenvd.nl.crt
         SSLCertificateKeyFile   /ssl/jeroenvd.nl.key
 
         SSLProtocol all -SSLv2
