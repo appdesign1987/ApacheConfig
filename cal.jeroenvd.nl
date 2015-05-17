@@ -25,8 +25,6 @@
         SSLProtocol all -SSLv2
         SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW
 
-        SetEnvIf User-Agent ".*MSIE.*" nokeepalive ssl-unclean-shutdown downgrade-1.0 force-response-1.0
-
         # Error Documents
         #Alias /maintenance /srv/www/htdocs/
         #ErrorDocument 503 /maintenance/
