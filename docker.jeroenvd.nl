@@ -14,20 +14,16 @@
         # SSL Configuratie
 
         SSLEngine on
-        ErrorLog /var/log/apache2/docker.jeroenvd.nl/ssl_error_log
-        TransferLog /var/log/apache2/docker.jeroenvd.nl/ssl_access_log
-        CustomLog /var/log/apache2/docker.jeroenvd.nl/ssl_request_log "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
+        ErrorLog /var/log/apache2/ssl_error_log
+        TransferLog /var/log/apache2/ssl_access_log
+        CustomLog /var/log/apache2/ssl_request_log "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
         LogLevel warn
 
-#        SSLCACertificateFile    /etc/apache2/ssl/COMODORSADomainValidationSecureServerCA.crt
-#        SSLCertificateChainFile /etc/apache2/ssl/
-         SSLCertificateFile      /etc/apache2/ssl/STAR_jeroenvd_nl.crt
-        SSLCertificateKeyFile   /etc/apache2/ssl/jeroenvd.nl.key
+SSLCertificateFile      /ssl/STAR_jeroenvd_nl.crt
+        SSLCertificateKeyFile   /ssl/jeroenvd.nl.key
 
         SSLProtocol all -SSLv2
         SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW
-
-        SetEnvIf User-Agent ".*MSIE.*" nokeepalive ssl-unclean-shutdown downgrade-1.0 force-response-1.0
 
         # Error Documents
         #Alias /maintenance /srv/www/htdocs/
