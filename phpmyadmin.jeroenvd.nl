@@ -49,7 +49,7 @@
 
         ProxyPass /maintenance !
         
-        ProxyPass /  https://192.168.88.171:8443/
-        ProxyPassReverse / https://192.168.88.171:8443/
+        ProxyPass /  https://phpmyadmin/
+        ProxyPassReverse / https://phpmyadmin/
 
 </VirtualHost>
