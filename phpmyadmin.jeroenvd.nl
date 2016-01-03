@@ -53,7 +53,7 @@ SSLProxyCheckPeerExpire off
 
         ProxyPass /maintenance !
         
-        ProxyPass /  https://phpmyadmin/
-        ProxyPassReverse / https://phpmyadmin/
+        ProxyPass /  http://phpmyadmin/
+        ProxyPassReverse / http://phpmyadmin/
 
 </VirtualHost>
